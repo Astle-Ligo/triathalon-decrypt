@@ -4,13 +4,27 @@ function check() {
 
     console.log("Entered Value: ", enteredValue);
 
+    length = enteredValue.length < predefinedValue.length ? enteredValue.length : predefinedValue.length;
+
+    console.log(length);
+
+    newString = ""
+
+    for (i = 0; i < length; i++) {
+        if (enteredValue[i] != predefinedValue[i]) {
+            newString += `<span class="wrong-char">${enteredValue[i]}</span>`;
+        } else {
+            newString += enteredValue[i];
+        }
+    }
+    document.getElementById('content').innerHTML = newString;
+
     if (enteredValue === predefinedValue) {
         console.log("True");
-        document.body.style.backgroundColor = "green"
-        window.alert("You Passed Away")
+        document.body.style.backgroundColor = "green";
+        window.alert("Your Code has been Decrypted. :):)");
     } else {
         console.log("False");
-        document.body.style.backgroundColor = "red"
-
+        document.body.style.backgroundColor = "red";
     }
 }
