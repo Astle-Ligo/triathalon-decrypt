@@ -19,7 +19,7 @@ function check() {
     }
     document.getElementById('content').innerHTML = newString;
 
-    if (enteredValue === predefinedValue) {
+    if (newString === predefinedValue) {
         console.log("True");
         document.body.style.backgroundColor = "green";
         window.alert("Your Code has been Decrypted. :):)");
